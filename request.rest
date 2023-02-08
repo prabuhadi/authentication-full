@@ -75,7 +75,7 @@ GET http://localhost:5050/products
 
 ###
 // get single products
-GET http://localhost:5050/products/d31944a3-f73b-4c80-be68-71361d9446d0
+GET http://localhost:5050/product/b47535fd-61fa-4cbd-965b-a5d5da73c0a9
 
 ###
 // create product (post)
@@ -83,6 +83,20 @@ POST http://localhost:5050/products
 Content-Type: application/json
 
 {
-  "name": "Product 4",
+  "name": "Product 6",
   "price": 699
 }
+
+###
+// update product (patch)
+PATCH http://localhost:5050/product/443002f2-26da-43e8-8d46-c466ba692b05
+Content-Type: application/json
+
+{
+  "name": "Product 5",
+  "price": 499
+}
+
+###
+// delete product
+DELETE http://localhost:5050/product/ce2a4182-0e30-4cd2-aa40-6847ca4a2dcd
