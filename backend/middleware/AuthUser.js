@@ -7,7 +7,7 @@ export const verifyUser = async (req, res, next) => {
     return res.status(401).json({ msg: "Mohon login ke Akun Anda" });
   }
   const user = await User.findOne({
-    attributes: ["uuid", "name", "email", "role"],
+    // attributes: ["uuid", "name", "email", "role"], bug attribute jangan disertakan
     where: {
       uuid: req.session.userId,
     },
@@ -21,7 +21,6 @@ export const verifyUser = async (req, res, next) => {
 // New Function : agar edit database user hanya dilakukan oleh admin
 export const adminOnly = async (req, res, next) => {
   const user = await User.findOne({
-    attributes: ["uuid", "name", "email", "role"],
     where: {
       uuid: req.session.userId,
     },

@@ -53,7 +53,7 @@ POST http://localhost:5050/login
 Content-Type: application/json
 
 {
-  "email": "cyan6969@gmail.com",
+  "email": "axelcio@gmail.com",
   "password": "123456"
 }
 
@@ -74,11 +74,15 @@ DELETE http://localhost:5050/logout
 GET http://localhost:5050/products
 
 ###
+// get single products
+GET http://localhost:5050/products/d31944a3-f73b-4c80-be68-71361d9446d0
+
+###
 // create product (post)
 POST http://localhost:5050/products
 Content-Type: application/json
 
 {
-  "name": "Product 1",
-  "price": 1000
+  "name": "Product 4",
+  "price": 699
 }

@@ -43,7 +43,6 @@ const Products = db.define(
   }
 );
 
-// Create Relation ORM one to many, view in desainer xampp
 Users.hasMany(Products);
 Products.belongsTo(Users, { foreignKey: "userId" });
 
