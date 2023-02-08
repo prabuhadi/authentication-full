@@ -3,11 +3,11 @@ POST http://localhost:5050/users
 Content-Type: application/json
 
 {
-  "name": "Prabu Hadi",
-  "email": "admin@gmail.com",
+  "name": "User69",
+  "email": "random69@gmail.com",
   "password": "123456",
   "confPassword": "123456",
-  "role": "admin"
+  "role": "user"
 }
 
 ###
@@ -20,12 +20,12 @@ GET http://localhost:5050/users/f61b973a-9669-46af-b86f-7dd78de3f7a5
 
 ###
 // update user (patch)
-PATCH http://localhost:5050/users/f61b973a-9669-46af-b86f-7dd78de3f7a5
+PATCH http://localhost:5050/users/86a4f1e8-9280-472a-9d37-a82a2f33a5ac
 Content-Type: application/json
 
 {
-  "name": "Cyan",
-  "email": "cyan6969@gmail.com",
+  "name": "Axelcio",
+  "email": "axelcio@gmail.com",
   "password": "",
   "confPassword": "",
   "role": "user"
@@ -33,7 +33,7 @@ Content-Type: application/json
 
 ###
 // delete user
-DELETE http://localhost:5050/users/569a64b6-b9b0-47f2-b5a1-f2316d18b8f1
+DELETE http://localhost:5050/users/651081eb-0424-454d-8c0c-93a0b151e66e
 
 
 ///////// AUTHENTICATION /////////

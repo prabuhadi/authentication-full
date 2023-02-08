@@ -49,7 +49,7 @@ export const createUser = async (req, res) => {
 };
 
 export const updateUser = async (req, res) => {
-  const user = await User.findOne({
+  const user = await Users.findOne({
     where: {
       uuid: req.params.id, // not uuid but id
     },
@@ -67,7 +67,7 @@ export const updateUser = async (req, res) => {
       .status(400)
       .json({ msg: "Password dan Confirm Password tidak cocok" });
   try {
-    await User.update(
+    await Users.update(
       {
         name: name,
         email: email,
@@ -87,14 +87,14 @@ export const updateUser = async (req, res) => {
 };
 
 export const deleteUser = async (req, res) => {
-  const user = await User.findOne({
+  const user = await Users.findOne({
     where: {
       uuid: req.params.id, // not uuid but id
     },
   });
   if (!user) return res.status(404).json({ msg: "User Tidak Ditemukan" });
   try {
-    await User.destroy({
+    await Users.destroy({
       where: {
         id: user.id,
       },
