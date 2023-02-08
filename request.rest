@@ -49,3 +49,7 @@ Content-Type: application/json
 
 ###
 GET http://localhost:5050/me
+// Tanpa menggunakan connect-session-sequelize akan otomotis logout apabila server berhenti
+
+###
+DELETE http://localhost:5050/logout
