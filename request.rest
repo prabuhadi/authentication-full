@@ -38,7 +38,7 @@ DELETE http://localhost:5050/users/651081eb-0424-454d-8c0c-93a0b151e66e
 
 ///////// AUTHENTICATION /////////
 ###
-// Login User
+// Login Admin
 POST http://localhost:5050/login
 Content-Type: application/json
 
@@ -48,8 +48,37 @@ Content-Type: application/json
 }
 
 ###
+// Login User
+POST http://localhost:5050/login
+Content-Type: application/json
+
+{
+  "email": "cyan6969@gmail.com",
+  "password": "123456"
+}
+
+###
+// Login status
 GET http://localhost:5050/me
 // Tanpa menggunakan connect-session-sequelize akan otomotis logout apabila server berhenti
 
 ###
+// Logout
 DELETE http://localhost:5050/logout
+
+
+///////// PRODUCT /////////
+
+###
+// get all products
+GET http://localhost:5050/products
+
+###
+// create product (post)
+POST http://localhost:5050/products
+Content-Type: application/json
+
+{
+  "name": "Product 1",
+  "price": 1000
+}
