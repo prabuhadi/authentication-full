@@ -1,5 +1,0 @@
-{
-  "dependencies": {
-    "connect-session-sequelize": "^7.1.5"
-  }
-}
