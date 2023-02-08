@@ -1,0 +1,36 @@
+// create user (post)
+POST http://localhost:5050/users
+Content-Type: application/json
+
+{
+  "name": "Prabu Hadi",
+  "email": "admin@gmail.com",
+  "password": "123456",
+  "confPassword": "123456",
+  "role": "admin"
+}
+
+###
+// get all users
+GET http://localhost:5050/users
+
+###
+// get single user or by id
+GET http://localhost:5050/users/f61b973a-9669-46af-b86f-7dd78de3f7a5
+
+###
+// update user (patch)
+PATCH http://localhost:5050/users/f61b973a-9669-46af-b86f-7dd78de3f7a5
+Content-Type: application/json
+
+{
+  "name": "Cyan",
+  "email": "cyan6969@gmail.com",
+  "password": "",
+  "confPassword": "",
+  "role": "user"
+}
+
+###
+// delete user
+DELETE http://localhost:5050/users/569a64b6-b9b0-47f2-b5a1-f2316d18b8f1
