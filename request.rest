@@ -34,3 +34,18 @@ Content-Type: application/json
 ###
 // delete user
 DELETE http://localhost:5050/users/569a64b6-b9b0-47f2-b5a1-f2316d18b8f1
+
+
+///////// AUTHENTICATION /////////
+###
+// Login User
+POST http://localhost:5050/login
+Content-Type: application/json
+
+{
+  "email": "admin@gmail.com",
+  "password": "123456"
+}
+
+###
+GET http://localhost:5050/me
