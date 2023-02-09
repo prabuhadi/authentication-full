@@ -1,12 +1,11 @@
 import React from "react";
 import Layout from "./Layout.jsx";
+import Welcome from "../components/Welcome.jsx";
 
 const Dashboard = () => {
   return (
     <Layout>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-      similique, sit eos adipisci modi accusantium tempore in temporibus ab
-      rerum?
+      <Welcome />
     </Layout>
   );
 };
