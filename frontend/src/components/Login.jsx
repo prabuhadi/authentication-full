@@ -19,7 +19,7 @@ const Login = () => {
       navigate("/dashboard");
     }
     dispatch(reset());
-  }, [user, navigate, isSuccess, dispatch]); // tambahkan dependency array react hook
+  }, [user, isSuccess, dispatch, navigate]); // tambahkan dependency array react hook
 
   // prevent default agar ketika submit page tidak reload
   // setelah dispatch triger set state user
@@ -52,7 +52,7 @@ const Login = () => {
                   <label className="label">Email</label>
                   <div className="control">
                     <input
-                      type="text"
+                      type="email"
                       className="input"
                       placeholder="example@mail.com"
                       value={email}
