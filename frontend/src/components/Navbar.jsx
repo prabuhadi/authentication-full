@@ -33,7 +33,7 @@ const Navbar = () => {
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">
-                <button className="button is-light">Log Out</button>
+                <button className="button is-danger is-light">Log Out</button>
               </div>
             </div>
           </div>

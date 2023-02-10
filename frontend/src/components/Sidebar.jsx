@@ -45,12 +45,12 @@ const Sidebar = () => {
             </ul>
           </div>
         )}
+
         <p className="menu-label">Settings</p>
         <ul className="menu-list">
           <li>
-            <button onClick={logout} className="button is-white">
-              <IoLogOut className="mr-2" />
-              Logout
+            <button onClick={logout} className="button is-danger is-light">
+              <IoLogOut className="mr-2" /> Logout
             </button>
           </li>
         </ul>

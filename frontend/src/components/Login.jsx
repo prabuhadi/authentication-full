@@ -44,15 +44,17 @@ const Login = () => {
                 />
               </div>
               <form onSubmit={Auth} className="box">
-                {isError && <p className="has-text-centered">{message}</p>}
                 <h1 className="is-size-4 has-text-weight-bold has-text-centered is-uppercase is-dark is-2">
                   Sign In
                 </h1>
+                {isError && (
+                  <p className="has-text-centered has-text-danger	">{message}</p>
+                )}
                 <div className="field">
                   <label className="label">Email</label>
                   <div className="control">
                     <input
-                      type="email"
+                      type="text"
                       className="input"
                       placeholder="example@mail.com"
                       value={email}

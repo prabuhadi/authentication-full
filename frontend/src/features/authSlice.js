@@ -14,7 +14,7 @@ export const LoginUser = createAsyncThunk(
   async (user, thunkAPI) => {
     try {
       const response = await axios.post("http://localhost:5050/login", {
-        email: user.email,
+        email: user.email, // bug its 'email' not 'mail
         password: user.password,
       });
       return response.data;
@@ -40,7 +40,7 @@ export const getMe = createAsyncThunk("user/getMe", async (_, thunkAPI) => {
 });
 
 export const LogOut = createAsyncThunk("user/LogOut", async () => {
-    await axios.delete("http://localhost:5050/logout");
+  await axios.delete("http://localhost:5050/logout");
 });
 
 export const authSlice = createSlice({
@@ -61,7 +61,7 @@ export const authSlice = createSlice({
     builder.addCase(LoginUser.rejected, (state, action) => {
       state.isLoading = false;
       state.isError = true;
-      state.user = action.payload;
+      state.message = action.payload; // bug its 'message' not 'user'
     });
 
     // Get User Login
@@ -76,7 +76,7 @@ export const authSlice = createSlice({
     builder.addCase(getMe.rejected, (state, action) => {
       state.isLoading = false;
       state.isError = true;
-      state.user = action.payload;
+      state.message = action.payload; // bug its 'message' not 'user'
     });
   },
 });
