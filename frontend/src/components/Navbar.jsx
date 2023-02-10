@@ -1,8 +1,20 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../logo.png";
+import { useDispatch } from "react-redux";
+import { LogOut, reset } from "../features/authSlice";
 
 const Navbar = () => {
+  const dispatch = useDispatch;
+  const navigate = useNavigate;
+
+  // BUG
+  const logout = () => {
+    dispatch(LogOut());
+    dispatch(reset());
+    navigate("/");
+  };
+
   return (
     <div>
       <nav
@@ -33,7 +45,9 @@ const Navbar = () => {
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">
-                <button className="button is-danger is-light">Log Out</button>
+                <button onClick={logout} className="button is-danger is-light">
+                  Log Out
+                </button>
               </div>
             </div>
           </div>
