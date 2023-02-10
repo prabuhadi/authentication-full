@@ -29,7 +29,7 @@ const Login = () => {
   };
 
   return (
-    <section className="hero has-background-grey-light is-fullheight is-fullwidth">
+    <section className="hero has-background-link-light is-fullheight is-fullwidth">
       <div className="hero-body">
         <div className="container">
           <div className="columns is-centered">
@@ -77,7 +77,7 @@ const Login = () => {
                 <div className="field mt-5">
                   <button
                     type="submit"
-                    className="button is-success is-fullwidth"
+                    className="button has-text-weight-bold is-uppercase is-success is-fullwidth"
                   >
                     {isLoading ? "Loading..." : "Login"}
                   </button>
