@@ -4,10 +4,11 @@ import { useSelector } from "react-redux";
 const Welcome = () => {
   const { user } = useSelector((state) => state.auth);
   return (
-    <div className="p-3">
+    <div className="box mt-3 mr-3">
       <h1 className="title">User Profile</h1>
       <h2 className="subtitle mt-3">
-        Welcome Back <strong>{user && user.name}</strong>! Have a nice day ...
+        Welcome Back <strong>{user && user.name}</strong>! You are login as an{" "}
+        <strong>{user && user.role}</strong>, Have a nice day ...
       </h2>
       <p className="p-4 mr-6 is-family-secondary has-text-justified">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos deleniti

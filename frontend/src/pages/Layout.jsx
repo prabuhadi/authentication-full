@@ -10,6 +10,7 @@ const Layout = ({ children }) => {
   const navigate = useNavigate();
   const { isError } = useSelector((state) => state.auth);
 
+  // protected layout need autorize to access
   useEffect(() => {
     dispatch(getMe());
   }, [dispatch]);
@@ -23,12 +24,22 @@ const Layout = ({ children }) => {
   return (
     <React.Fragment>
       <Navbar />
-      <div className="columns mt-6">
+      <div className="columns mt-6" style={{ minHeight: "100vh" }}>
         <div className="column is-2">
           <Sidebar />
         </div>
         <div className="column has-background-light">
           <main>{children}</main>
+          <div
+            className="has-text-centered"
+            style={{
+              position: "absolute",
+              bottom: "-30px",
+              left: "50%",
+            }}
+          >
+            Copyright &copy; 2023 AdminPro. All Rights Reserved.
+          </div>
         </div>
       </div>
     </React.Fragment>

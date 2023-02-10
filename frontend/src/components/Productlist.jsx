@@ -20,13 +20,13 @@ function ProductList() {
   };
 
   return (
-    <div>
+    <div className="box mt-3 mr-3">
       <h1 className="title">Products</h1>
       <h2 className="subtitle">List of Products</h2>
       <Link to="/products/add" className="button is-primary mb-3">
         Add New
       </Link>
-      <table className="table is-stripped is-fullwidth">
+      <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
         <thead>
           <tr>
             <th>No</th>
@@ -41,7 +41,7 @@ function ProductList() {
             <tr key={product.uuid}>
               <td>{index + 1}</td>
               <td>{product.name}</td>
-              <td>{product.price}</td>
+              <td>$ {product.price}</td>
               <td>{product.user.name}</td>
               <td>
                 <Link
